@@ -10,37 +10,49 @@
     <ul class="mui-table-view mui-grid-view mui-grid-9">
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
         <a href="#">
-          <span class="mui-icon mui-icon-home"></span>
+          <span class="mui-icon">
+            <img src="../../images/icon-menu1.png" alt />
+          </span>
           <div class="mui-media-body">新闻资讯</div>
         </a>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
         <a href="#">
-          <span class="mui-icon mui-icon-email"></span>
+          <span class="mui-icon">
+            <img src="../../images/icon-menu2.png" alt />
+          </span>
           <div class="mui-media-body">图片分享</div>
         </a>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
         <a href="#">
-          <span class="mui-icon mui-icon-chatbubble"></span>
+          <span class="mui-icon">
+            <img src="../../images/icon-menu3.png" alt />
+          </span>
           <div class="mui-media-body">商品购买</div>
         </a>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
         <a href="#">
-          <span class="mui-icon mui-icon-location"></span>
+          <span class="mui-icon">
+            <img src="../../images/icon-menu4.png" alt />
+          </span>
           <div class="mui-media-body">留言反馈</div>
         </a>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
         <a href="#">
-          <span class="mui-icon mui-icon-search"></span>
+          <span class="mui-icon">
+            <img src="../../images/icon-menu5.png" alt />
+          </span>
           <div class="mui-media-body">视频专区</div>
         </a>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
         <a href="#">
-          <span class="mui-icon mui-icon-phone"></span>
+          <span class="mui-icon">
+            <img src="../../images/icon-menu6.png" alt />
+          </span>
           <div class="mui-media-body">联系我们</div>
         </a>
       </li>
@@ -110,6 +122,11 @@ export default {
     .mui-table-view-cell {
       border-right: none;
       border-bottom: none;
+      .mui-icon {
+        img {
+          width: 60px;
+        }
+      }
     }
   }
 }

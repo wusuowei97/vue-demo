@@ -23,6 +23,8 @@ import mockdata from './mock'
 import './lib/mui/css/mui.min.css'
 // 导入 mui icons-extra 扩张图标 样式
 import './lib/mui/css/icons-extra.css'
+// 导入 iconfont 图片样式文件
+import './lib/iconfont/iconfont.css'
 import {
   Header,
   Swipe,

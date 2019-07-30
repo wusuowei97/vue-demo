@@ -12,6 +12,10 @@ import SearchContainer from '../components/tabber/SearchContainer.vue'
 export default new Router({
   routes: [ // 配置路由规则
     {
+      path: '/',
+      redirect: '/home'
+    },
+    {
       path: '/home',
       name: 'HomeContainer',
       component: HomeContainer
