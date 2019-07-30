@@ -5,19 +5,34 @@
 import Vue from 'vue'
 // 导入 App 根组件
 import App from './App'
+// 导入router.js 路由模块
 import router from './router'
+
+// 导入 vue-resource
+import VueResource from 'vue-resource'
+// 安装 vue-resource
+Vue.use(VueResource);
+
+// 导入模拟好的数据接口
+import mockdata from './mock'
+
 
 // 按需导入 Mint-UI 中的组件
 // import 'mint-ui/lib/style.css'
 // 导入 mui 的样式
 import './lib/mui/css/mui.min.css'
+// 导入 mui icons-extra 扩张图标 样式
+import './lib/mui/css/icons-extra.css'
 import {
-  Header
+  Header,
+  Swipe,
+  SwipeItem
 } from 'mint-ui'
 
-Vue.component(Header.name, Header);
 
-Vue.use(Header);
+Vue.component(Header.name, Header);
+Vue.component(Swipe.name, Swipe);
+Vue.component(SwipeItem.name, SwipeItem);
 
 Vue.config.productionTip = false
 
@@ -25,6 +40,7 @@ Vue.config.productionTip = false
 var vm = new Vue({
   el: '#app',
   router,
+  // render: c => c(app),
   components: {
     App
   },
