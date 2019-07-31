@@ -28,13 +28,15 @@ import './lib/iconfont/iconfont.css'
 import {
   Header,
   Swipe,
-  SwipeItem
+  SwipeItem,
+  Button
 } from 'mint-ui'
 
 
 Vue.component(Header.name, Header);
 Vue.component(Swipe.name, Swipe);
 Vue.component(SwipeItem.name, SwipeItem);
+Vue.component(Button.name, Button);
 
 Vue.config.productionTip = false
 

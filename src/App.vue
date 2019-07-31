@@ -51,6 +51,7 @@ html {
   color: #2c3e50;
   &.app-container {
     padding-top: 40px;
+    padding-bottom: 50px;
     overflow-x: hidden;
   }
 }
