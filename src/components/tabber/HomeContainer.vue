@@ -17,12 +17,12 @@
         </router-link>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-        <a href="#">
+        <router-link to="/home/photolist">
           <span class="mui-icon">
             <img src="../../images/icon-menu2.png" alt />
           </span>
           <div class="mui-media-body">图片分享</div>
-        </a>
+        </router-link>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
         <a href="#">
@@ -76,7 +76,7 @@ export default {
   methods: {
     // 获取轮播图数据的方法
     getBannerList() {
-      this.$http.get("/msg1").then(result => {
+      this.$http.get("/getbanners").then(result => {
         // console.log(result);
         if (result.status === 200) {
           // 成功了

@@ -20,7 +20,7 @@ function getNewsListData() {
   let newsListData = []
   for (let i = 0; i < 20; i++) {
     let newsList = {
-      id: Random.increment(19), // 资讯id
+      id: Random.increment(1), // 资讯id
       title: Random.ctitle(1, 15), //  标题
       add_time: Random.datetime(), // 添加时间
       zhaiyao: Random.csentence(1, 20), //  摘要
@@ -40,7 +40,7 @@ function getNewsContData() {
   let newsContData = []
   for (let i = 0; i < 20; i++) {
     let newsCont = [{
-      id: Random.increment(19), // 资讯id
+      id: Random.increment(1), // 资讯id
       title: Random.ctitle(1, 15), //  标题
       add_time: Random.datetime(), // 添加时间
       click: Random.integer(10, 100), //  点击数
@@ -68,12 +68,55 @@ function getCommentsData() {
   }
 }
 
-const data = Mock.mock('/msg1', getBannerListData)
+function getImgCategory() {
+  let imgCategory = []
+  for (let i = 0; i < 6; i++) {
+    let imgCategoryData = {
+      title: Random.ctitle(4), //  分类名称
+      id: Random.increment(1) //  分类id
+    }
+    imgCategory.push(imgCategoryData)
+  }
+  return {
+    data: imgCategory
+  }
+}
+
+function getImages() {
+  let imgList = []
+  for (let i = 0; i < 10; i++) {
+    let imgListData = {
+      id: Random.increment(1), //  图片id
+      title: Random.ctitle(9), //  分类名称
+      img_url: Random.dataImage('400x400', 'mock图片!'), // 图片路径
+      zhaiyao: Random.csentence(1, 80) //  摘要
+    }
+    imgList.push(imgListData)
+  }
+  return {
+    data: imgList
+  }
+}
+
+function postComment() {
+  // 评论的数据 unshift 到 原本的评论数组中
+  // let commentContent = "";
+  // commentData.unshift(commentContent);
+
+}
+
+const data = Mock.mock('/getbanners', getBannerListData)
 const data2 = Mock.mock('/getnews', getNewsListData)
 const data3 = Mock.mock('/getnewscont', getNewsContData)
 const data4 = Mock.mock('/getcomments', getCommentsData)
+const data5 = Mock.mock('/postcomment', postComment)
+const data6 = Mock.mock('/getimgcategory', getImgCategory)
+const data7 = Mock.mock('/getimages', getImages)
 export default {
   data,
   data2,
-  data4
+  data4,
+  data5,
+  data6,
+  data7
 };

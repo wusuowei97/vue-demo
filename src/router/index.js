@@ -10,6 +10,7 @@ import ShopcarContainer from '../components/tabber/ShopcarContainer.vue'
 import SearchContainer from '../components/tabber/SearchContainer.vue'
 import NewsList from '../components/news/NewsList.vue'
 import NewsInfo from '../components/news/NewsInfo.vue'
+import PhotoList from '../components/photos/PhotoList.vue'
 
 export default new Router({
   routes: [ // 配置路由规则
@@ -40,6 +41,10 @@ export default new Router({
     {
       path: '/home/newsinfo/:id',
       component: NewsInfo
+    },
+    {
+      path: '/home/photolist',
+      component: PhotoList
     }
   ],
   linkActiveClass: 'mui-active' // 覆盖默认的路由高亮的类，默认的类是 router-link-active

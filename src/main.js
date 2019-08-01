@@ -12,10 +12,13 @@ import router from './router'
 import VueResource from 'vue-resource'
 // 安装 vue-resource
 Vue.use(VueResource);
+// 全局配置 post 时候表单数据格式的组织形式 application/x-www-form-urlencoded
+Vue.http.options.emulateJSON = true;
+
+
 
 // 导入模拟好的数据接口
 import mockdata from './mock'
-
 
 // 按需导入 Mint-UI 中的组件
 // import 'mint-ui/lib/style.css'
@@ -29,7 +32,8 @@ import {
   Header,
   Swipe,
   SwipeItem,
-  Button
+  Button,
+  Lazyload
 } from 'mint-ui'
 
 
@@ -37,6 +41,8 @@ Vue.component(Header.name, Header);
 Vue.component(Swipe.name, Swipe);
 Vue.component(SwipeItem.name, SwipeItem);
 Vue.component(Button.name, Button);
+// 注册 lazyload
+Vue.use(Lazyload);
 
 Vue.config.productionTip = false
 
